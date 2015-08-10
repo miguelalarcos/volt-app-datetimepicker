@@ -1,0 +1,11 @@
+<:Title>
+  Home
+
+<:Body>
+  <h1>Miguel</h1>
+
+  <div>
+    {{ store._todos.each do |todo| }}
+      <:date_time_picker time={{true}} value="{{todo._label}}" date_format='%d-%m-%y %H:%M' />
+    {{ end }}
+  </div>
