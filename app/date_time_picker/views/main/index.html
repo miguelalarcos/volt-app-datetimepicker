@@ -14,28 +14,28 @@
     {{if show}}
     <div class="xdatetime-popover">
       <div class="xdatetime-header">
-        <span e-click="minusMonth">-</span>
+        <span e-click="minusMonth"><i class="fa fa-minus"></i></span>
         {{attrs.value.strftime('%m')}}
-        <span e-click="plusMonth">+</span>
+        <span e-click="plusMonth"><i class="fa fa-plus"></i></span>
         <span>&nbsp;&nbsp;</span>
-        <span e-click="minusYear">-</span>
+        <span e-click="minusYear"><i class="fa fa-minus"></i></span>
         {{attrs.value.strftime('%y')}}
-        <span e-click="plusYear">+</span>
+        <span e-click="plusYear"><i class="fa fa-plus"></i></span>
       </div>
       {{weeks.each do |w|}}
       <:week w="{{w}}" value="{{attrs.value}}" hide_calendar="{{hide_calendar}}" />
       {{end}}
       {{if attrs.time}}
       <div class="xdatetime-bottom">
-        <span e-click="minusHour" class="minus-hour">-</span>
+        <span e-click="minusHour" class="minus-hour"><i class="fa fa-minus"></i></span>
         <span>&nbsp;&nbsp;</span>
-        <span e-click="plusHour" class="plus-hour">+</span>
+        <span e-click="plusHour" class="plus-hour"><i class="fa fa-plus"></i></span>
         <span>&nbsp;&nbsp;</span>
         <span >{{attrs.value.strftime('%H:%M')}}</span>
         <span>&nbsp;&nbsp;</span>
-        <span e-click="minusMinute" class="minus-minute">-</span>
+        <span e-click="minusMinute" class="minus-minute"><i class="fa fa-minus"></i></span>
         <span>&nbsp;&nbsp;</span>
-        <span e-click="plusMinute" class="plus-minute">+</span>
+        <span e-click="plusMinute" class="plus-minute"><i class="fa fa-plus"></i></span>
       </div>
       {{end}}
     </div>
